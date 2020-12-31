@@ -7,9 +7,6 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferInt;
 
-import java.io.IOException;
-
-
 public class Main {
     static int counter = 0;
     static int fishCaught = 0;
@@ -58,8 +55,8 @@ public class Main {
     }
 
 
-    static float percentageOfSimilarity(BufferedImage imageA, BufferedImage imageB) throws IOException {
-        float percentage = 0;
+    static float percentageOfSimilarity(BufferedImage imageA, BufferedImage imageB) {
+        float percentage;
         DataBuffer dbA = imageA.getData().getDataBuffer();
         int sizeA = dbA.getSize();
         DataBuffer dbB = imageB.getData().getDataBuffer();
